@@ -2,7 +2,8 @@
 
 - name: Hello World Sample
   hosts: all
-  tasks:
+  roles:
+    - test
     - name: Hello Message
       debug:
         msg: "Hello World!"
