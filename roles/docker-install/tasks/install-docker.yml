@@ -1,22 +1,22 @@
 ---
 - name: Create directory 
   file:
-    dest: {{ docker_repo_gnupg_folder }}
+    dest: "{{ docker_repo_gnupg_folder }}"
     state: directory
     mode: 0755
 
 - name: Download GPG key
   get_url:
     url: https://download.docker.com/linux/{{ ansible_distribution | capitalize }}/gpg
-    dest: {{ docker_repo_gnupg_file }}
+    dest: "{{ docker_repo_gnupg_file }}"
     mode: 0700
 
 - name: Add Docker repository
   copy:
-    content: {{ docker_repository }}
+    content: "{{ docker_repository }}"
     dest: /etc/apt/sources.list.d/docker.list
 
 - name: Install prerequesite package
   apt:
-    name: {{ docker_pkg_install }}
+    name: "{{ docker_pkg_install }}"
     update_cache: true
