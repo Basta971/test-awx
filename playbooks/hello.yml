@@ -3,7 +3,4 @@
 - name: Hello World Sample
   hosts: all
   roles:
-    - test
-    - name: Hello Message
-      debug:
-        msg: "Hello World!"
+    - { role : roles/test }
