@@ -1,0 +1,6 @@
+---
+- name: Install prerequisite package
+  include: install-package.yml
+
+- name : Install docker
+  include: install-docker.yml
