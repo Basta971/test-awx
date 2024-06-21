@@ -18,5 +18,5 @@
 
 - name: Install prerequesite package
   apt:
-    pkg: "{{ docker_pkg_install }}"
+    name: "{{ docker_pkg_install }}"
     update_cache: true

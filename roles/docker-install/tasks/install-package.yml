@@ -2,10 +2,10 @@
 
 - name: Delete old package
   apt:
-    pkg: "{{ del_old_pkg }}"
+    name: "{{ del_old_pkg }}"
     status: absent
 
 - name: Install prerequesite package
   apt:
-    pkg: "{{ pre_pkg_install }}"
+    name: "{{ pre_pkg_install }}"
     update_cache: true
