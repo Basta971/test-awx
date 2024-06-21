@@ -14,7 +14,7 @@ pre_pkg_install :
 
 docker_repo_gnupg_folder : /etc/apt/keyrings
 docker_repo_gnupg_file: "{{docker_repo_gnupg_folder}}/docker.asc"
-docker_repository: "deb [arch=amd64 signed-by={{docker_repo_gnupg_file}}] https://download.docker.com/linux/{{ ansible_distribution | capitalize }} {{ ansible_distribution_release | capitalize }} stable"
+docker_repository: "deb [arch=amd64 signed-by={{docker_repo_gnupg_file}}] https://download.docker.com/linux/{{ ansible_distribution | lower }} {{ ansible_distribution_release | lower }} stable"
 docker_pkg_install:  
   - docker-ce 
   - docker-ce-cli 
