@@ -3,7 +3,7 @@
 - name: Delete old package
   apt:
     name: "{{ del_old_pkg }}"
-    status: absent
+    state: absent
 
 - name: Install prerequesite package
   apt:
