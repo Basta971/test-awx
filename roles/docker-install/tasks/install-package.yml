@@ -7,5 +7,5 @@
 
 - name: Install prerequesite package
   apt:
-    name: "{{ pre_pkg_install }}"
+    pkg: "{{ pre_pkg_install }}"
     update_cache: true
