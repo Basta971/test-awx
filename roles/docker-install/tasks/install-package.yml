@@ -5,6 +5,10 @@
     name: "{{ del_old_pkg }}"
     state: absent
 
+- name: Update repository
+  apt:
+    update_cache: yes
+
 - name: Install prerequesite package
   apt:
     name: "{{ pre_pkg_install }}"
